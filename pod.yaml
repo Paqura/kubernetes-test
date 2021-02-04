@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-web2
+spec:
+  containers:
+    - name : container-test
+      image: paqura616/k8s:0.0.1
+      ports:
+        - containerPort: 80 

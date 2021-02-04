@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubik-deployment
+  labels:
+    app: kubik-app
+spec:
+  selector:
+    matchLabels:
+      project: paqura
+  template:
+    metadata:
+      labels:
+         project: paqura
+    spec:
+      containers:
+        - name: paqura-test-php
+          image: paqura616/k8s:0.0.1
+          ports:
+            - containerPort: 80
+
